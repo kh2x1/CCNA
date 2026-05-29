@@ -1,0 +1,24 @@
+{
+  "name": "NetSchool — Learn CCNA & Network+",
+  "short_name": "NetSchool",
+  "description": "Free interactive bilingual platform to master CCNA and CompTIA Network+.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b1120",
+  "theme_color": "#2563eb",
+  "lang": "en",
+  "dir": "auto",
+  "categories": ["education", "productivity"],
+  "icons": [
+    { "src": "assets/icons/icon-192.svg", "sizes": "192x192", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/icons/icon-512.svg", "sizes": "512x512", "type": "image/svg+xml", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    { "name": "CCNA", "url": "./#/learn/ccna" },
+    { "name": "Network+", "url": "./#/learn/networkplus" },
+    { "name": "Subnet Calculator", "url": "./#/tools/subnet" },
+    { "name": "Quiz Center", "url": "./#/quiz" }
+  ]
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NetSchool — Learn CCNA & CompTIA Network+ Free</title>
+  <meta name="description" content="A complete, interactive, bilingual (Arabic/English) platform to master the full CCNA 200-301 and CompTIA Network+ syllabi — real lessons, labs, quizzes, flashcards, subnet calculator and more. Free and works offline.">
+  <meta name="keywords" content="CCNA, Network+, CompTIA, networking, subnetting, OSI model, Cisco, routing, switching, VLAN, learn networking, شبكات, تعلم الشبكات">
+  <meta name="author" content="NetSchool">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Open Graph / SEO -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NetSchool — Learn CCNA & CompTIA Network+">
+  <meta property="og:description" content="Master networking with interactive lessons, labs, quizzes and pro tools. Free, bilingual, offline-ready.">
+  <meta property="og:image" content="assets/icons/og.svg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="./">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.svg">
+
+  <!-- Fonts (with system fallback if offline) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Cairo:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/themes.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+
+  <!-- Structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "NetSchool",
+    "description": "Free interactive platform for learning CCNA and CompTIA Network+.",
+    "educationalCredentialAwarded": "Course Completion Certificate",
+    "teaches": ["CCNA 200-301", "CompTIA Network+", "Subnetting", "Routing", "Switching"]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="app-header" id="appHeader"></header>
+
+  <main id="app" tabindex="-1"></main>
+  <div id="main"></div>
+
+  <footer class="app-footer" id="appFooter"></footer>
+
+  <!-- ===== Core (order matters) ===== -->
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/netcalc.js"></script>
+  <script src="assets/js/ui.js"></script>
+
+  <!-- ===== Content data (registers onto window.NS_DATA) ===== -->
+  <script src="assets/data/ccna.fundamentals.js"></script>
+  <script src="assets/data/ccna.network-access.js"></script>
+  <script src="assets/data/ccna.ip-connectivity.js"></script>
+  <script src="assets/data/ccna.services-security.js"></script>
+  <script src="assets/data/ccna.automation.js"></script>
+  <script src="assets/data/networkplus.js"></script>
+  <script src="assets/data/quizbank.js"></script>
+  <script src="assets/data/labs.js"></script>
+  <script src="assets/data/cheatsheets.js"></script>
+  <script src="assets/data/ports.js"></script>
+  <script src="assets/data/commands.js"></script>
+  <script src="assets/data/interview.js"></script>
+
+  <!-- ===== App ===== -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/pages.home.js"></script>
+  <script src="assets/js/pages.learn.js"></script>
+  <script src="assets/js/pages.tools.js"></script>
+  <script src="assets/js/pages.resources.js"></script>
+  <script src="assets/js/pages.quiz.js"></script>
+  <script src="assets/js/pages.progress.js"></script>
+  <script src="assets/js/router.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

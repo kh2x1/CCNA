@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="شرح شامل بالعربية لجميع مواضيع شهادتي CCNA و Network+ في الشبكات." />
+  <title>أكاديمية الشبكات | شرح CCNA و Network+</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Fira+Code&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <button id="menuToggle" class="menu-toggle" aria-label="فتح القائمة">☰</button>
+    <div class="brand">
+      <span class="brand-logo">🌐</span>
+      <span class="brand-name">أكاديمية الشبكات</span>
+    </div>
+    <div class="search-wrap">
+      <input id="searchInput" type="search" placeholder="ابحث عن موضوع… (مثال: VLAN, OSI, NAT)" aria-label="بحث" />
+      <ul id="searchResults" class="search-results" hidden></ul>
+    </div>
+    <button id="themeToggle" class="theme-toggle" aria-label="تبديل الوضع الليلي">🌙</button>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar">
+      <nav id="nav" class="nav"><!-- يُبنى ديناميكيًا --></nav>
+    </aside>
+    <div id="overlay" class="overlay"></div>
+
+    <main id="content" class="content">
+      <!-- يُحقن المحتوى هنا -->
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>أُنشئ بهدف تعليمي لشرح مواضيع <strong>CCNA (200-301)</strong> و <strong>CompTIA Network+</strong>.</p>
+  </footer>
+
+  <button id="toTop" class="to-top" aria-label="العودة للأعلى" hidden>↑</button>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

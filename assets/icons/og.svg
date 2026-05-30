@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1120"/><stop offset="1" stop-color="#13294b"/></linearGradient>
+  <linearGradient id="t" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5b8dff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <text x="80" y="300" font-family="Arial,sans-serif" font-size="86" font-weight="900" fill="#fff">Net<tspan fill="url(#t)">School</tspan></text>
+  <text x="80" y="370" font-family="Arial,sans-serif" font-size="40" fill="#a9b6d3">Master CCNA &amp; CompTIA Network+ — Free &amp; Interactive</text>
+  <text x="80" y="440" font-family="Arial,sans-serif" font-size="30" fill="#6b7a9c">Lessons · Labs · Quizzes · Subnet Calculator · Bilingual AR/EN</text>
+</svg>

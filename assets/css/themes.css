@@ -1,0 +1,126 @@
+/* ==========================================================================
+   themes.css — Design tokens for Dark / Light mode
+   NetSchool: Networking Education Platform (CCNA + Network+)
+   All visual constants live here so the whole UI can be re-themed in one place.
+   ========================================================================== */
+
+:root {
+  /* Brand palette */
+  --brand-50:  #eef6ff;
+  --brand-100: #d9eaff;
+  --brand-200: #b6d6ff;
+  --brand-300: #84b9ff;
+  --brand-400: #4b91ff;
+  --brand-500: #2563eb; /* primary */
+  --brand-600: #1d4ed8;
+  --brand-700: #1e40af;
+  --brand-800: #1e3a8a;
+  --brand-900: #172554;
+
+  --accent-500: #06b6d4; /* cyan accent */
+  --accent-600: #0891b2;
+  --success-500: #16a34a;
+  --warning-500: #d97706;
+  --danger-500:  #dc2626;
+  --purple-500:  #7c3aed;
+
+  /* Typography */
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-ar: "Cairo", "Tajawal", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", "SFMono-Regular", Consolas, monospace;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.5rem;
+  --fs-3xl: 1.875rem;
+  --fs-4xl: 2.5rem;
+  --fs-5xl: 3.25rem;
+
+  /* Spacing scale */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.25rem;
+  --sp-6: 1.5rem;
+  --sp-8: 2rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+  --sp-20: 5rem;
+
+  /* Radius & shadows */
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
+  --radius-full: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.08);
+  --shadow: 0 6px 24px rgba(15, 23, 42, 0.10);
+  --shadow-lg: 0 18px 50px rgba(15, 23, 42, 0.18);
+
+  --transition: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+  --header-h: 64px;
+  --sidebar-w: 300px;
+  --maxw: 1240px;
+}
+
+/* ---------- Light theme (default) ---------- */
+:root,
+[data-theme="light"] {
+  --bg: #f6f8fc;
+  --bg-soft: #eef2f9;
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --surface-3: #eef2f7;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text: #0f172a;
+  --text-soft: #475569;
+  --text-muted: #94a3b8;
+  --primary: var(--brand-500);
+  --primary-soft: var(--brand-50);
+  --on-primary: #ffffff;
+  --accent: var(--accent-600);
+  --code-bg: #0f172a;
+  --code-text: #e2e8f0;
+  --scrim: rgba(15, 23, 42, 0.45);
+  --hero-glow: radial-gradient(60% 80% at 20% 10%, rgba(37,99,235,0.12), transparent),
+               radial-gradient(50% 70% at 90% 0%, rgba(6,182,212,0.12), transparent);
+}
+
+/* ---------- Dark theme ---------- */
+[data-theme="dark"] {
+  --bg: #0b1120;
+  --bg-soft: #0f1729;
+  --surface: #131c31;
+  --surface-2: #182238;
+  --surface-3: #1f2c47;
+  --border: #243049;
+  --border-strong: #33415f;
+  --text: #e8eefb;
+  --text-soft: #a9b6d3;
+  --text-muted: #6b7a9c;
+  --primary: #5b8dff;
+  --primary-soft: rgba(91, 141, 255, 0.12);
+  --on-primary: #07112a;
+  --accent: #22d3ee;
+  --code-bg: #07101f;
+  --code-text: #d6e2ff;
+  --scrim: rgba(2, 6, 18, 0.65);
+  --hero-glow: radial-gradient(60% 80% at 15% 5%, rgba(91,141,255,0.18), transparent),
+               radial-gradient(55% 70% at 95% 0%, rgba(34,211,238,0.14), transparent);
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 22px 60px rgba(0, 0, 0, 0.55);
+}
+
+/* Respect OS preference on first visit (overridden by stored choice via JS) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+  }
+}

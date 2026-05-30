@@ -10,7 +10,17 @@
   /* ============================ TRACK OVERVIEW ============================ */
   P.track = function (mount, { track }) {
     const tr = window.Data.track(track);
-    if (!tr.modules.length) { mount.innerHTML = loading(); return; }
+    if (!tr.modules.length) {
+      const title = track === 'networkplus' ? 'CompTIA Network+ N10-009' : 'Cisco CCNA 200-301';
+      mount.innerHTML = `<section class="page-hero"><div class="container">
+          <h1>${title}</h1></div></section>
+        <div class="container"><div class="empty-state">${window.icon('book', 64)}
+          <h2>${window.i18n.lang === 'ar' ? 'المحتوى قيد الإعداد' : 'Content in progress'}</h2>
+          <p>${window.i18n.lang === 'ar' ? 'دروس هذا المسار قيد الكتابة. في هذه الأثناء، استكشف مسار CCNA الكامل والأدوات والمختبرات.' : 'Lessons for this track are being authored. Meanwhile, explore the full CCNA track, tools and labs.'}</p>
+          <a class="btn btn-primary" style="margin-top:16px" href="#/learn/ccna">${window.icon('route', 18)} CCNA</a>
+        </div></div>`;
+      return;
+    }
     const lessons = window.Data.lessonsOf(track);
     const done = lessons.filter(l => window.Store.isDone(l.id)).length;
     const pct = Math.round((done / Math.max(lessons.length, 1)) * 100);

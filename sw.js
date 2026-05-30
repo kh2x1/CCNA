@@ -3,7 +3,7 @@
    Strategy: cache-first for app shell + data, network fallback. Bump CACHE
    when files change to invalidate old caches.
    ========================================================================== */
-const CACHE = 'netschool-v1';
+const CACHE = 'netschool-v2';
 const ASSETS = [
   './', './index.html', './manifest.webmanifest',
   './assets/css/themes.css', './assets/css/main.css', './assets/css/components.css',

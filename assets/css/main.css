@@ -16,7 +16,11 @@ body {
   -webkit-font-smoothing: antialiased;
   transition: background var(--transition), color var(--transition);
   min-height: 100vh;
+  /* Stop off-canvas (RTL/LTR) panels from causing horizontal scroll.
+     `clip` keeps position:sticky working, unlike `hidden`. */
+  overflow-x: clip;
 }
+html { overflow-x: clip; }
 
 /* Arabic typography + RTL */
 html[lang="ar"] body { font-family: var(--font-ar); }
@@ -154,11 +158,14 @@ html[dir="rtl"] .lesson-link { padding: 7px 30px 7px 12px; }
 @media (max-width: 1024px) {
   .with-sidebar { grid-template-columns: 1fr; }
   .sidebar {
-    position: fixed; top: 0; inset-inline-start: 0; bottom: 0; width: 320px; max-width: 86vw;
-    max-height: 100vh; z-index: 130; border-radius: 0; transform: translateX(-110%);
+    position: fixed; top: 0; bottom: 0; width: 320px; max-width: 86vw;
+    max-height: 100vh; z-index: 130; border-radius: 0;
     transition: transform var(--transition); padding-top: calc(var(--header-h) + var(--sp-2));
   }
-  html[dir="rtl"] .sidebar { transform: translateX(110%); inset-inline-start: auto; inset-inline-end: 0; }
+  /* Off-canvas: slide fully off-screen using PHYSICAL sides per direction so it
+     never peeks back in or causes horizontal scroll in RTL. */
+  html[dir="ltr"] .sidebar { left: 0; right: auto; transform: translateX(-110%); }
+  html[dir="rtl"] .sidebar { right: 0; left: auto; transform: translateX(110%); }
   .sidebar.open { transform: translateX(0); }
   .sidebar-toggle { display: inline-grid; }
   .scrim.show { display: block; position: fixed; inset: 0; background: var(--scrim); z-index: 120; }
